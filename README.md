@@ -52,13 +52,13 @@ The Chengdu dataset is used as the primary evaluation dataset, while the Aba dat
 
 Several preprocessing steps were performed before graph construction:
 
-### Enterprise Attributes
+###### Enterprise Attributes
 
 * **Registered Capital:** measured in units of 10,000 RMB.
 * **Firm Age:** calculated in months using June 1, 2025 as the reference date.
 * **Industry Category:** original industry labels are mapped into major industry groups to reduce sparsity and improve generalization.
 
-### Court Encoding
+##### Court Encoding
 
 Court hierarchy information is encoded as:
 
@@ -69,7 +69,7 @@ Court hierarchy information is encoded as:
 | High Court         |        2 |
 | Supreme Court      |        3 |
 
-### Bankruptcy Labels
+##### Bankruptcy Labels
 
 A binary label is used to represent enterprise status:
 
@@ -78,10 +78,37 @@ A binary label is used to represent enterprise status:
 | 0     | Normal enterprise               |
 | 1     | Bankrupt / High-risk enterprise |
 
-### Data Sources
+##### Data Sources
 
 | File              | Description                         |
 | ----------------- | ----------------------------------- |
 | `basic_info.csv`  | Enterprise registration information |
 | `cause.csv`       | Judicial case records               |
 | `shareholder.csv` | Shareholder information             |
+
+## Environment
+
+Experiments were conducted under the following environment:
+
+| Component         | Version    |
+| ----------------- | ---------- |
+| OS                | Windows 10 |
+| Python            | 3.12       |
+| CUDA              | 12.9       |
+| PyTorch           | 2.9.0      |
+| PyTorch Geometric | 2.6.1      |
+| NumPy             | 1.26.4     |
+| Pandas            | 2.3.2      |
+| Scikit-learn      | 1.7.1      |
+
+##### Main Dependencies
+
+* torch
+* torch-geometric
+* numpy
+* pandas
+* scikit-learn
+* scipy
+* xgboost
+* networkx
+* tqdm
