@@ -112,3 +112,25 @@ Experiments were conducted under the following environment:
 * xgboost
 * networkx
 * tqdm
+
+* ## Evaluation Metrics
+
+To comprehensively evaluate bankruptcy prediction performance under severe class imbalance, we report the following metrics:
+
+| Metric            | Description                                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------------------- |
+| AUC               | Area Under the ROC Curve. Measures the ranking ability of the model across different classification thresholds. |
+| AUPRC             | Area Under the Precision-Recall Curve. More informative than AUC for highly imbalanced datasets.                |
+| F1pos             | F1-score of the positive class (high-risk enterprises).                                                         |
+| Sensitivity (TPR) | True Positive Rate, measuring the ability to correctly identify high-risk enterprises.                          |
+| Specificity (TNR) | True Negative Rate, measuring the ability to correctly identify normal enterprises.                             |
+
+The metrics are computed based on the confusion matrix:
+
+|                    | Actual Positive | Actual Negative |
+| ------------------ | --------------- | --------------- |
+| Predicted Positive | TP              | FP              |
+| Predicted Negative | FN              | TN              |
+
+where TP, TN, FP, and FN denote true positives, true negatives, false positives, and false negatives, respectively.
+
