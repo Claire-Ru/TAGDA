@@ -20,7 +20,6 @@ where (N) is the number of nodes, (E) is the number of edges, (L) is the number 
 To ensure a fair evaluation, we adopt a stratified random split strategy at the enterprise level.
 
 * **Split ratio:** 60% training, 20% validation, and 20% testing.
-* **Random seed:** 42.
 * **Split unit:** enterprise ID (`com_id`).
 * **Stratification:** the bankruptcy label distribution is preserved across training, validation, and test sets.
 * **No overlap:** enterprises appearing in one split do not appear in any other split.
