@@ -113,7 +113,8 @@ Experiments were conducted under the following environment:
 * networkx
 * tqdm
 
-* ## Evaluation Metrics
+
+## Evaluation Metrics
 
 To comprehensively evaluate bankruptcy prediction performance under severe class imbalance, we report the following metrics:
 
