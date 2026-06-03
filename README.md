@@ -134,3 +134,27 @@ The metrics are computed based on the confusion matrix:
 
 where TP, TN, FP, and FN denote true positives, true negatives, false positives, and false negatives, respectively.
 
+
+## Computational Cost
+
+All experiments were conducted on the following hardware platform:
+
+| Component | Specification              |
+| --------- | -------------------------- |
+| OS        | Windows 10 Professional    |
+| CPU       | Intel Core i5-13400F       |
+| RAM       | 32 GB                      |
+| GPU       | NVIDIA GeForce RTX 5060 Ti |
+| Storage   | 1 TB SSD                   |
+
+##### Training Efficiency
+
+Under the default configuration:
+
+* Average training time per epoch: approximately **3 minutes**
+* GPU memory: approximately **8–12 GB** (depending on graph size and batch configuration)
+* Training is performed on a single GPU
+
+The proposed TAGDA framework can be trained on a consumer-grade GPU without requiring distributed training or high-performance computing resources.
+
+
